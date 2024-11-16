@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - pip install -r requirements.txt
+      - pip install coverage
+  build:
+    commands:
+      - echo Running tests and collecting coverage...
+      - coverage run -m pytest
+      - coverage report -m
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+
+artifacts:
+  files:
+    - coverage.xml       # Exporta o relatório de cobertura
+    - **/*.py            # Arquivos fonte (opcional)
