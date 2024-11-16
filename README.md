@@ -56,7 +56,7 @@ vehicle-sales-service/
 ---
 
 
-## **Configuração do Ambiente**
+## 🛠️ Configuração do Ambiente
 
 1. Clone o repositório:
    ```bash
@@ -71,3 +71,51 @@ vehicle-sales-service/
 4. Clone o repositório:
    ```bash
    python -m src.database
+
+---
+
+## ⚙️ Executar o Serviço
+
+### Localmente:
+   ```bash
+   uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+   ```
+
+### Com Docker Compose:
+
+1. Construa e inicie o container:
+   ```bash
+   docker-compose up --build
+2. O serviço estará disponível em: http://localhost:8000
+
+---
+
+## 📂 Endpoints Disponíveis
+
+### Cadastro de Veículos
+
+- Rota: GET /vehicles
+- Descrição: Registra uma venda de veículo.
+- Body:
+   ```json
+   {
+  "vehicle_id": 1,
+  "buyer_cpf": "12345678901",
+  "sale_date": "2024-11-15"
+   }
+   ```
+
+---
+
+## 🧪 Testando o Serviço
+
+1. Execute os testes:
+   ```bash
+   pytest --disable-warnings
+
+2. Para gerar o relatório de cobertura:
+    ```bash
+    coverage run -m pytest
+   coverage report -m
+   coverage html  # Para um relatório em HTML
+
