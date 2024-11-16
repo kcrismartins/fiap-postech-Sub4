@@ -49,6 +49,7 @@ vehicle-sales-service/
 ├── requirements.txt           # Dependências do projeto
 ├── Dockerfile                 # Configuração Docker
 ├── docker-compose.yml         # Configuração para ambiente local
+├── buildspec.yml              # Arquivo necessário para CI/CD
 └── README.md                  # Documentação do projeto
 ```
 
