@@ -60,7 +60,7 @@ vehicle-sales-service/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/your-organization/vehicle-sales-service.git
+   git clone https://github.com/kcrismartins/fiap-postech-Sub4-vehicle-sales-service.git
    cd vehicle-sales-service
 2. Clone o repositório:
    ```bash
